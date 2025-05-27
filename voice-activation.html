@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice Activation for Emergencies</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+  <div class="background-container">
+    <div class="symbol">🚺</div>
+    <div class="symbol">♀️</div>
+    <div class="symbol">🛡️</div>
+    <div class="symbol">🔒</div>
+    <div class="symbol">👩‍⚕️</div>
+  </div>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voice Activation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background-color: #f3f4f6;
+      padding: 60px 20px;
+    }
+
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 16px;
+      font-size: 22px;
+    }
+
+    .mic-icon {
+      font-size: 80px;
+      color: #6c63ff;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+
+    .status {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .alert {
+      margin-top: 30px;
+      color: red;
+      font-weight: bold;
+      font-size: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>🎙️ Voice Activation for Emergencies</header>
+
+  <div class="mic-icon" onclick="startListening()">🎤</div>
+  <div class="status" id="status">Click the mic to start listening...</div>
+  <div class="alert" id="alertBox">🚨 Emergency Triggered by Voice!</div>
+
+  <script>
+    const keywords = ["help", "emergency", "sos"];
+    const statusEl = document.getElementById("status");
+    const alertBox = document.getElementById("alertBox");
+
+    function startListening() {
+      if (!('webkitSpeechRecognition' in window)) {
+        alert("Your browser does not support speech recognition.");
+        return;
+      }
+
+      const recognition = new webkitSpeechRecognition();
+      recognition.continuous = false;
+      recognition.lang = 'en-US';
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      statusEl.innerText = "🎧 Listening for 'help', 'emergency', or 'SOS'...";
+
+      recognition.start();
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript.toLowerCase();
+        console.log("Heard:", transcript);
+        if (keywords.some(kw => transcript.includes(kw))) {
+          alertBox.style.display = "block";
+        } else {
+          alertBox.style.display = "none";
+          statusEl.innerText = "❌ No emergency keywords detected.";
+        }
+      };
+
+      recognition.onerror = () => {
+        statusEl.innerText = "⚠️ Error occurred while listening.";
+      };
+
+      recognition.onend = () => {
+        statusEl.innerText = "Click the mic to start listening again...";
+      };
+    }
+  </script>
+
+
+    <h2>Benefits of Voice Activation</h2>
+    <ul>
+      <li>Hands-free activation in emergencies</li>
+      <li>Quickly call for help without touching your phone</li>
+      <li>Easy to use, even when stressed</li>
+    </ul>
+
+    <h2>How Voice Activation Works</h2>
+    <p>Simply say a pre-defined phrase to activate the SOS alert. The app will then send an alert to your emergency contacts with your location.</p>
+
+    <h2>Security Considerations</h2>
+    <p>The voice activation phrase is stored securely on your device. You can change the phrase at any time.</p>
+
+    <a href="index.html">Back to Home</a>
+  <footer class="site-footer">
+    <p>&copy; 2025 Sheraksha</p>
+  </footer>
+</body>
+</html>

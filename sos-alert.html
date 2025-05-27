@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOS Alert with One Click</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <div class="background-container">
+    <div class="symbol">🚺</div>
+    <div class="symbol">♀️</div>
+    <div class="symbol">🛡️</div>
+    <div class="symbol">🔒</div>
+    <div class="symbol">👩‍⚕️</div>
+  </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SOS Alert</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #fefefe;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: #ff69b4;
+      color: white;
+      padding: 16px 24px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .sos-button {
+      background-color: #e63946;
+      border: none;
+      color: white;
+      padding: 20px 40px;
+      font-size: 28px;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+      transition: all 0.3s ease;
+      animation: pulse 1.5s infinite;
+    }
+
+    .sos-button:hover {
+      background-color: #d62839;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(230, 57, 70, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+      }
+    }
+
+    .confirmation {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🚨 SOS Alert with One Click</header>
+
+  <button class="sos-button" onclick="triggerSOS()">SEND SOS</button>
+
+  <div class="confirmation" id="confirmationMsg">
+    ✅ SOS alert sent successfully to emergency services and contacts!
+  </div>
+
+  <script>
+    function triggerSOS() {
+      // Simulating an API call delay
+      document.getElementById("confirmationMsg").style.display = "none";
+      setTimeout(() => {
+        // This is where you'd hook up a real API/webhook call.
+        console.log("SOS sent to server!");
+        document.getElementById("confirmationMsg").style.display = "block";
+      }, 1000);
+    }
+  </script>
+</body>
+
+    <h2>Benefits of SOS Alert</h2>
+    <ul>
+      <li>Quickly alert emergency contacts in case of danger</li>
+      <li>Get help faster</li>
+      <li>Easy to use</li>
+      <li>Provides peace of mind</li>
+    </ul>
+
+    <h2>How SOS Alert Works</h2>
+    <p>With one click, the app sends an SOS alert to your emergency contacts. The alert includes your location, so they can quickly find you.</p>
+
+    <h2>Security Considerations</h2>
+    <p>Your emergency contacts are securely stored. Only you can choose who your emergency contacts are.</p>
+
+    <a href="index.html">Back to Home</a>
+  <footer class="site-footer">
+    <p>&copy; 2025 Sheraksha</p>
+  </footer>
+</body>
+</html>

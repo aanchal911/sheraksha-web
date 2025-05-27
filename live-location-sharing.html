@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Location Sharing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+  </header>
+  <div class="background-container">
+    <div class="symbol">🚺</div>
+    <div class="symbol">♀️</div>
+    <div class="symbol">🛡️</div>
+    <div class="symbol">🔒</div>
+    <div class="symbol">👩‍⚕️</div>
+  </div>
+    <h1>Live Location Sharing</h1>
+    <p>This page provides information about the Live Location Sharing feature.</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8">
+  <title>LIVE LOCATION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4f46e5;
+    }
+
+    #map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .coords {
+      margin: 20px 0;
+      font-size: 16px;
+      color: #374151;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3730a3;
+    }
+  </style>
+</head>
+<body>
+  <h1>📍 Live Location Sharing</h1>
+  <div class="coords" id="coords">Getting your location...</div>
+  <iframe id="map" frameborder="0" allowfullscreen></iframe>
+  <br/>
+  <button onclick="copyLocation()">Copy Location</button>
+  <button onclick="shareLocation()">Share Location</button>
+
+  <script>
+    let latitude, longitude;
+
+    function initMap(lat, lng) {
+      const iframe = document.getElementById("map");
+      const mapURL = `https://www.google.com/maps/embed/v1/view?key=YOUR_GOOGLE_MAPS_API_KEY&center=${lat},${lng}&zoom=16&maptype=roadmap`;
+      iframe.src = mapURL;
+    }
+
+    function copyLocation() {
+      const locText = `https://maps.google.com/?q=${latitude},${longitude}`;
+      navigator.clipboard.writeText(locText).then(() => {
+        alert("📌 Location copied!");
+      });
+    }
+
+    function shareLocation() {
+      const locText = `https://maps.google.com/?q=${latitude},${longitude}`;
+      if (navigator.share) {
+        navigator.share({
+          title: 'My Live Location',
+          text: 'Here is my current location:',
+          url: locText,
+        });
+      } else {
+        alert("Sharing not supported. Try copying instead.");
+      }
+    }
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          latitude = position.coords.latitude;
+          longitude = position.coords.longitude;
+          document.getElementById("coords").innerText = `Latitude: ${latitude.toFixed(5)} | Longitude: ${longitude.toFixed(5)}`;
+          initMap(latitude, longitude);
+        }, () => {
+          document.getElementById("coords").innerText = "⚠️ Unable to retrieve location.";
+        });
+      } else {
+        document.getElementById("coords").innerText = "❌ Geolocation is not supported by your browser.";
+      }
+    }
+
+    getLocation();
+  </script>
+
+
+  
+  <footer style="margin-top: auto;">
+    <p>&copy; 2025 Sheraksha</p>
+  </footer>
+</body>
+</html>
