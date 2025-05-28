@@ -22,33 +22,44 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f1f5f9;
+      background-color: #white; /* Light pink background */
       padding: 20px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #ff69b4;
-      color: white;
+      background-color: #79eb9f;
+      color: #dc2626;
       padding: 16px 20px;
       border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
 
     h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
     }
 
     button.add-btn {
-      background-color: white;
-      color: #dc2626;
+      background-color: #dc2626;
+      color: #white;
       border: none;
-      padding: 8px 12px;
+      padding: 10px 16px;
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button.add-btn:hover {
+      background-color: #c02020;
     }
 
     ul {
@@ -58,11 +69,11 @@
     }
 
     li {
-      background-color: white;
+      background-color: #fa98c9;
       border-radius: 10px;
       padding: 15px;
       margin-bottom: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 6px #white;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -80,11 +91,14 @@
       border-radius: 50%;
       font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     .call-btn:hover {
       background-color: #15803d;
     }
+
+    
   </style>
 </head>
 <body>

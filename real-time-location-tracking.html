@@ -1,14 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOS Alert with One Click</title>
+    
 
+</head>
 
-  <div class="background-container">
-    <div class="symbol">🚺</div>
-    <div class="symbol">♀️</div>
-    <div class="symbol">🛡️</div>
-    <div class="symbol">🔒</div>
-    <div class="symbol">👩‍⚕️</div>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Real-Time Location Tracking</title>
@@ -17,11 +14,11 @@
           font-family: 'Segoe UI', sans-serif;
           margin: 0;
           padding: 0;
-          background-color: #f4f6fa;
+          background-color: #f9c8c8; /* Light pink background */
         }
         header {
-          background-color: #2d6cdf;
-          color: white;
+          background-color: #b2f1cb;
+          color: #e44d26;
           padding: 16px 24px;
           font-size: 20px;
         }
@@ -47,9 +44,7 @@
       <!-- Replace with your own Google Maps Embed API key if needed -->
       <iframe
         class="map-container"
-        src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Current+Location"
-        allowfullscreen>
-      </iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.184986079798!2d73.17701981495409!3d22.30990908531813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5f593000001%3A0x7b9add35bd05002d!2sNavrachana%20University!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     
       <script>
         // Optional: Use Geolocation API to dynamically show user's location
@@ -57,16 +52,16 @@
           const lat = position.coords.latitude;
           const lon = position.coords.longitude;
           const mapFrame = document.querySelector("iframe");
-          mapFrame.src = `https://www.google.com/maps/embed?v=1/place?key=YOUR_API_KEY&q=${lat},${lon}`;
-        }, function(error) {
-          alert("Location access denied or unavailable.");
-        });
-      </script>
-    </body>
-    </html>
+          mapFrame.src = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.184986079798!2d73.17701981495409!3d22.30990908531813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5f593000001%3A0x7b9add35bd05002d!2sNavrachana%20University!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin`;
+       
+      });
+     </script>
+   </body>
+   </html>
 
-  
-    <a href="index.html">Back to Home</a>
+    
   <footer class="site-footer">
     <p>&copy; 2025 Sheraksha</p>
   </footer>
+</body>
+</html>

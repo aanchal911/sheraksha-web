@@ -7,6 +7,21 @@
   pointer-events: none; /* allow clicks through */
   overflow: hidden;
   z-index: 0;
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+  background-image: url('uj.jpeg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Fade level */
+
+
 }
 
 .symbol {
@@ -17,7 +32,7 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   user-select: none;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 /* Starting positions and delays */
@@ -70,6 +85,23 @@ header {
   color: white;
   z-index: 1;
   position: relative;
+  margin-top: 0;
+  font-family: 'Pacifico', cursive;
+}
+
+.woman-symbol {
+  font-size: 2rem;
+ 
+  display: inline-block;
+}
+
+@keyframes rotateSymbol {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .hero {
@@ -87,6 +119,7 @@ header {
 .hero p {
   margin: 1rem 0;
 }
+
 
 .download-btn {
   background-color: #ff1493;
@@ -181,7 +214,7 @@ header {
 
 .core-value-card {
   flex: 1 1 180px;
-  background: #e4d8e0;
+  background: #da6dcc;
   padding: 1rem;
   text-align: center;
   border-radius: 10px;
@@ -203,7 +236,7 @@ header {
 
 .key-feature-card {
   flex: 1 1 250px;
-  background: #f3e5f5;
+  background: #f095d5;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;

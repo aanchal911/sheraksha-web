@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Urgent SOS Flash</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+      transition: background-color 0.2s;
+      font-family: Arial, sans-serif;
+    }
+
+    .sos-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="sos-button" id="sosButton">Urgent SOS</button>
+
+  <script>
+    const sosButton = document.getElementById("sosButton");
+    let isFlashing = false;
+    let flashInterval;
+
+    sosButton.addEventListener("click", () => {
+      isFlashing = !isFlashing;
+
+      if (isFlashing) {
+        sosButton.textContent = "Stop SOS";
+        flashInterval = setInterval(() => {
+          document.body.style.backgroundColor =
+            document.body.style.backgroundColor === 'white' ? 'red' : 'white';
+        }, 300); // speed of flash
+      } else {
+        clearInterval(flashInterval);
+        document.body.style.backgroundColor = 'white';
+        sosButton.textContent = "Urgent SOS";
+      }
+    });
+  </script>
+
+</body>
+</html>

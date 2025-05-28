@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>panic button</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+  </header>
+  <div class="background-container">
+    <div class="symbol">🚺</div>
+    <div class="symbol">♀️</div>
+    <div class="symbol">🛡️</div>
+    <div class="symbol">🔒</div>
+    <div class="symbol">👩‍⚕️</div>
+  </div>
+    
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Panic Button</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 70vh;
+      background-color: #0f0e0e; /* Light pink background */
+      color: #ebe7e7;
+    }
+
+    .panic-btn {
+      background-color: #d60000;
+      color: white;
+      font-size: 24px;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
+      50% { box-shadow: 0 0 40px rgba(255, 0, 0, 1); }
+      100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
+    }
+
+    .instructions {
+      margin-top: 30px;
+      max-width: 500px;
+      text-align: center;
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Panic Button</h1>
+  <button class="panic-btn" onclick="triggerPanic()">🚨 PRESS IN EMERGENCY</button>
+
+  <div class="instructions" id="instructions">
+    <h3>Emergency Actions</h3>
+    <ul style="text-align: left;">
+      <li>Call emergency helpline immediately.</li>
+      <li>Move to a public or safe place.</li>
+      <li>Share your condition with a trusted contact.</li>
+      <li>Use self-defense tools if necessary.</li>
+      <li>Don't panic. Breathe. Think.</li>
+    </ul>
+  </div>
+
+  <audio id="siren" src="police-siren-sound-effect-317645.mp3"></audio>
+
+  <script>
+    function triggerPanic() {
+      document.getElementById('siren').play();
+      document.getElementById('instructions').style.display = 'block';
+    }
+  </script>
+
+
+
+
+  
+  <footer class="site-footer">
+    <p>&copy; 2025 Sheraksha</p>
+  </footer>
+</body>
+</html>
