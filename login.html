@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sheraksha Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #ffb6c1, #ffe6f0);
+      color: #8b005d;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff1493;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin: 0.75rem 0 0.25rem;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6rem;
+      border: 2px solid #ff69b4;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      outline: none;
+    }
+
+    .form-section {
+      background-color: #fff0f5;
+      padding: 1.2rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 0 8px rgba(255, 192, 203, 0.3);
+    }
+
+    .form-section h3 {
+      margin-top: 0;
+      color: #c71585;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .optional {
+      font-style: italic;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      background-color: #ff69b4;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #ff1493;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8b008b;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🌸 Sheraksha Login – Safety With You Forever 🌸
+  </header>
+
+  <div class="container">
+    <h2>Welcome, it's totally FREE!</h2>
+    
+    <form id="loginForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="number">Your Phone Number</label>
+      <input type="tel" id="number" name="number" required>
+
+      <label for="age">Your Age</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <div class="form-section">
+        <h3>👨‍👩‍👧 Guardian Details</h3>
+
+        <label for="gname">Guardian Name</label>
+        <input type="text" id="gname" name="gname" required>
+
+        <label for="gphone">Guardian Phone Number</label>
+        <input type="tel" id="gphone" name="gphone" required>
+
+        <label for="gemail">Guardian Email</label>
+        <input type="email" id="gemail" name="gemail" required>
+
+        <label for="g2name">Guardian 2 Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="g2name" name="g2name">
+
+        <label for="g2phone">Guardian 2 Phone Number <span class="optional">(Optional)</span></label>
+        <input type="tel" id="g2phone" name="g2phone">
+
+        <label for="g2email">Guardian 2 Email <span class="optional">(Optional)</span></label>
+        <input type="email" id="g2email" name="g2email">
+      </div>
+
+      <div class="form-section">
+        <h3>👯 Emergency Friend Contact</h3>
+
+        <label for="fname">Friend's Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="fphone">Friend's Phone Number <span class="optional">(Optional)</span></label>
+        <input type="tel" id="fphone" name="fphone">
+
+        <label for="femail">Friend's Email <span class="optional">(Optional)</span></label>
+        <input type="email" id="femail" name="femail">
+      </div>
+
+      <button class="submit-btn" type="submit">Submit Form</button>
+    </form>
+
+    <div class="footer">
+      Made with 💖 by team Sheraksha ✨
+    </div>
+  </div>
+
+</body>
+</html>
