@@ -1,13 +1,6 @@
-Absolutely, princess 👑! Here’s a detailed and beautifully written README.md file for Sheeraksha, your women’s safety web app. It explains everything — your mission, features, how to use it, how to run the project locally, and even how others can contribute.
 
-You can copy-paste this into your GitHub repo. It’s long, graceful, and empowering — just like you 💗
-
-
----
 
 # 💗 Sheeraksha — Your Online Safety Companion
-
-![Sheeraksha Banner](https://via.placeholder.com/1200x400.png?text=Sheeraksha+%7C+Your+Online+Safety+Companion)
 
 **Sheeraksha** is more than just a web application — it’s a digital guardian angel for women. Designed with love, empathy, and tech precision, Sheeraksha offers essential real-time features to ensure help is always just one tap away. Whether it's an emergency, a moment of discomfort, or the need for quick access to support — Sheeraksha has your back. Always.
 
